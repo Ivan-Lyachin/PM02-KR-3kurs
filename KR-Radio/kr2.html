@@ -4,27 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script2.js"></script>
-    <!-- <script defer src="script4.js"></script> -->
+    <link rel="stylesheet" href="/KR-Radio/style.css" />
+    <script defer src="/KR-Radio/script2.js"></script>
     <title>KR</title>
   </head>
   <body>
+    <header class="header">
+      <a href="/KR-Radio/kr2.html">
+        <img
+          src="/KR-Radio/pictures/logo.jpg"
+          style="
+            width: 100px;
+            border-radius: 70px;
+            margin-left: 200px;
+            margin-top: 30px;
+          "
+        />
+      </a>
+    </header>
     <section>
-      <h1>
-        Запуск радиостанций по нажатию кнопки (вариант 2 или 4, max click)
-      </h1>
+      <h1>Запуск радиостанций по нажатию кнопки</h1>
+    </section>
+    <section>
+      <p id="timezone"></p>
     </section>
     <section>
       <form action="">
-        <label for="strana">Введите название страны :</label>
-        <input type="text" name="input" id="strana" placeholder="латиницей" />
-        <button type="button" onclick="krData(strana_str)">
-          Найти самую популярную
-        </button>
+        <label for="strana">Введите название страны:</label>
+        <input
+          type="text"
+          list="countries"
+          name="input"
+          id="strana_str"
+          placeholder="латиницей"
+        />
+        <datalist id="countries">
+          <option value="Argentina">Аргентина</option>
+          <option value="Armenia">Армения</option>
+          <option value="Belarus">Беларусь</option>
+          <option value="Belgium">Бельгия</option>
+          <option value="Brazil">Бразилия</option>
+          <option value="China">Китай</option>
+          <option value="Cuba">Куба</option>
+          <option value="Denmark">Дания</option>
+          <option value="Finland">Финляндия</option>
+          <option value="France">Франция</option>
+          <option value="Germany">Германия</option>
+          <option value="Greece">Греция</option>
+          <option value="Iceland">Исландия</option>
+          <option value="Japan">Япония</option>
+          <option value="Kazakhstan">Казахстан</option>
+          <option value="Norway">Норвегия</option>
+          <option value="Poland">Польша</option>
+          <option value="Portugal">Португалия</option>
+          <option value="Russia">Россия</option>
+          <option value="Slovenia">Словения</option>
+          <option value="Spain">Испания</option>
+          <option value="Switzerland">Швейцария</option>
+          <option value="Turkey">Турция</option>
+          <option value="United States of America">США</option>
+        </datalist>
+        <button type="button" onclick="krData()">Найти самую популярную</button>
       </form>
 
       <br />
     </section>
+    <footer>
+      <p>Иван Лячин, 2024</p>
+    </footer>
   </body>
 </html>
